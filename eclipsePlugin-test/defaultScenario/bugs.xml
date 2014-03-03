@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0-dev-20140202-UNKNOWN" sequence="1" timestamp="1391377670604" analysisTimestamp="1391377668209" release="">
+  <Project projectName="TestProject">
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="A">
+      <SourceLine classname="A" sourcefile="A.java" sourcepath="A.java"/>
+    </Class>
+    <Method classname="A" name="getCreationDate" signature="()Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="A" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="A.java" sourcepath="A.java"/>
+    </Method>
+    <Field classname="A" name="creationDate" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="A" sourcefile="A.java" sourcepath="A.java"/>
+    </Field>
+    <SourceLine classname="A" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="A.java" sourcepath="A.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="A">
+      <SourceLine classname="A" sourcefile="A.java" sourcepath="A.java"/>
+    </Class>
+    <Method classname="A" name="setCreationDate" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="A" start="17" end="18" startBytecode="0" endBytecode="61" sourcefile="A.java" sourcepath="A.java"/>
+    </Method>
+    <Field classname="A" name="creationDate" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="A" sourcefile="A.java" sourcepath="A.java"/>
+    </Field>
+    <LocalVariable name="creationDate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="A" start="17" end="17" startBytecode="2" endBytecode="2" sourcefile="A.java" sourcepath="A.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" first="1">
+    <Class classname="B">
+      <SourceLine classname="B" sourcefile="B.java" sourcepath="B.java"/>
+    </Class>
+    <Method classname="B" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="B" start="1" end="1" startBytecode="0" endBytecode="67" sourcefile="B.java" sourcepath="B.java"/>
+    </Method>
+    <SourceLine classname="B" start="3" end="3" startBytecode="11" endBytecode="11" sourcefile="B.java" sourcepath="B.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" first="1">
+    <Class classname="B">
+      <SourceLine classname="B" sourcefile="B.java" sourcepath="B.java"/>
+    </Class>
+    <Field classname="B" name="s" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="B" sourcefile="B.java" sourcepath="B.java"/>
+    </Field>
+    <SourceLine classname="B" start="3" end="3" startBytecode="14" endBytecode="14" sourcefile="B.java" sourcepath="B.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 2 Feb 2014 22:47:36 +0100" total_classes="2" referenced_classes="12" total_bugs="4" total_size="14" num_packages="1" vm_version="24.51-b03" cpu_seconds="5.97" clock_seconds="2.40" peak_mbytes="368.07" alloc_mbytes="800.00" gc_seconds="0.03" priority_2="4">
+    <PackageStats package="" total_bugs="4" total_types="2" total_size="14" priority_2="4">
+      <ClassStats class="A" sourceFile="A.java" interface="false" size="9" bugs="2" priority_2="2"/>
+      <ClassStats class="B" sourceFile="B.java" interface="false" size="5" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="514" invocations="2" avgMicrosecondsPerInvocation="257265" maxMicrosecondsPerInvocation="395264" standardDeviationMircosecondsPerInvocation="137999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="379" invocations="303" avgMicrosecondsPerInvocation="1251" maxMicrosecondsPerInvocation="28930" standardDeviationMircosecondsPerInvocation="2664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="126" invocations="12" avgMicrosecondsPerInvocation="10570" maxMicrosecondsPerInvocation="26627" standardDeviationMircosecondsPerInvocation="10653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="121" invocations="56" avgMicrosecondsPerInvocation="2174" maxMicrosecondsPerInvocation="29712" standardDeviationMircosecondsPerInvocation="4105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="271" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="1972" standardDeviationMircosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="4" avgMicrosecondsPerInvocation="10856" maxMicrosecondsPerInvocation="42396" standardDeviationMircosecondsPerInvocation="18209"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1391377670602" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
